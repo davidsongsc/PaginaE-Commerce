@@ -1,0 +1,19 @@
+{% include 'barra/head/head.html' %}
+{% include 'barra/head/style.html' %}
+{% include 'barra/bar_sp_login.html' %}
+
+<body>
+    <div class="layout">
+        <div class="conteudo-primario">{% for j in link %}
+            <a href="categoria/{{ j.2 }}" class="link-grupo-produtop">
+                <div class="bloco">
+                    <h8 class="nome-grupo">{{ j.0 }}</h8>
+
+                    <p class="descricao-grupo-produto">
+                        <img class="iconemenu" src="" alt=""> {{j.1}}
+                    </p>
+                </div>
+            </a>{% endfor %}
+        </div>
+    </div>
+</body>

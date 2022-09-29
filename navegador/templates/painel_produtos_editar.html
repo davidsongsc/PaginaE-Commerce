@@ -1,0 +1,133 @@
+{% include 'barra/head/head.html' %}
+{% include 'barra/head/style.html' %}
+{% include 'barra/bar_sp_logingm.html' %}
+
+<style>
+  .produto-exibicao {
+    text-align: center;
+    align-items: center;
+  }
+</style>
+<body>
+  <div class="layout" style="text-align: center;">
+    <div class="conteudo-produto">{% for j in produto %}
+      <form action="../modproduto" method="POST" class="formula-d">{% csrf_token %}
+        <div class="produto-exibicao">
+          <div class="lado-texto">
+            <h1>Dados</h1>
+            <h3><label for="tipo"></label>
+
+              <select name="tipo" id="tipo" value="{{j.7}}">
+
+                {% for i in g %}
+                <option value="{{i.id_grupo}}">{{i.nome_grupo}}</option>
+                {% endfor %}
+                <option value="{{j.7}}" selected="selected">MUDAR CATEGORIA PRODUTO</option>
+              </select>
+            </h3>
+            <h3>Nome Fantasia<br><input type="text" name="nomef" value="{{j.2}}"></h1>
+              <h3>Nome sistema<br><input type="text" name="nomes" value="{{j.1}}"></h1>
+                <h1>imposto</h1>
+                <table width="100%">
+                  <thead>
+                    <tr>
+                      <th class="CNPJ" colspan="4">federal: <input type="text" name="impfederal" value="{{j.8}}"></th>
+                      <th class="CNPJ" colspan="4">estadual: <input type="text" name="impestadual" value="{{j.9}}"></th>
+                    </tr>
+                    <tr>
+                      <th class="CNPJ" colspan="4">icms: <input type="text" name="impicms" value="{{j.10}}"></th>
+                      <th class="CNPJ" colspan="4">confins: <input type="text" name="impconfins" value="{{j.11}}"></th>
+                    </tr>
+                    <tr>
+
+                      <th class="CNPJ" colspan="4">Imp 1: <input type="text" name="imp1" value="{{j.12}}"></th>
+                      <th class="CNPJ" colspan="4">Imp 2: <input type="text" name="imp2" value="{{j.13}}"></th>
+                    </tr>
+                    <tr>
+
+                      <th class="CNPJ" colspan="4">Imp 3: <input type="text" name="imp3" value="{{j.14}}"></th>
+                      <th class="CNPJ" colspan="4">Imp 4: <input type="text" name="imp4" value="{{j.15}}"></th>
+                    </tr>
+                  </thead>
+                </table>
+                <h1>Valores</h1>
+                
+                <h3><p>Valor Real</p><input type="text" name="valor" value="{{j.18}}"></h1>
+                  <h3 disabled><p>Valor + Impostos</p><input type="text" name="valor2" value="R$ {{j.3}}" disabled> </h1>
+                    <h1>Imagem</h1>
+                    <div class="lado-imagem">
+                      <img src="../static/img/cardapio/{{j.1}}.png" alt="">
+                    </div>
+                    <input type="file" name="imagens" class="p3" multiple />
+          </div>
+          <div class="lado-texto" style="text-align: center;">
+
+            <h1>Descrição</h1>
+            <h3><textarea id="descr" name="descr" rows="6" cols="33"
+                style="width: 88%; font-size: 30px; border-bottom-right-radius: 60px;border-bottom-left-radius: 60px;">{{j.4}}
+                    </textarea></h3>
+            <h1>Disponibilidade</h1>
+
+            <h3><label class="radio" style="font-size: 40px; color:yellow; text-transform:uppercase;">
+                <input type="radio" name="disponivel" value="2">Limitado
+                <input type="text" name="quantidade" value="{{j.17}}" style="font-size: 15px;">
+
+              </label><br>
+              <label class="radio" style="font-size: 40px; color:red; text-transform:uppercase;">
+                <input type="radio" name="disponivel" value="1">
+                INDISPONIVEL
+              </label><br>
+              <label class="radio" style="font-size: 40px; color:green; text-transform:uppercase;">
+                <input type="radio" name="disponivel" value="0" checked>
+                DISPONIVEL ILIMITADO
+              </label>
+            </h3>
+            <h1>lista promos</h1>
+            <select name="promo" id="promo" value="{{j.19}}" style="font-size: 40px; width: 89%;">
+              <option value="86">VAZIO</option>
+              {% for i in promo %}
+              <option value="{{i}}">{{i}}</option>
+              {% endfor %}
+              <option value="{{j.19}}" selected="selected"></option>
+            </select>
+
+            <p class="p1" style="margin-top: 20px;"><br><button type="submit" class="st-sbmt" name="produtoid"
+                value="{{j.0}}">Salvar</button><button class="st-sbmt">cancelar</button></p>
+          </div>
+      </form>
+      {% endfor %}
+    </div>
+
+
+    <script>
+      window.onscroll = function () {
+        myFunction()
+      };
+
+      var header = document.getElementById("usuario-cct");
+      var sticky = header.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset > sticky) {
+          header.classList.add("sticky");
+
+
+        } else {
+          header.classList.remove("sticky");
+
+
+        }
+      }
+
+
+      function process(quant) {
+        var value = parseInt(document.getElementById("quantidade").value);
+        value += quant;
+        if (value < 1) {
+          document.getElementById("quantidade").value = 1;
+        } else {
+          document.getElementById("quantidade").value = value;
+        }
+      }
+    </script>
+</body>

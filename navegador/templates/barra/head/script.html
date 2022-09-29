@@ -1,0 +1,31 @@
+<script>
+window.onscroll = function () {
+    barra_sup()
+};
+
+var header = document.getElementById("usuario-cct");
+var sticky = header.offsetTop;
+
+function barra_sup() {
+    if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+
+
+    } else {
+        header.classList.remove("sticky");
+
+
+    }
+}
+</script>
+
+
+<script>
+    const iconepromo = setTimeout(oculta_icone, 3400);
+
+    function oculta_icone() {
+    var el = document.getElementById("promolista");
+    el.parentNode.removeChild(el);
+}
+    
+  </script>

@@ -1,0 +1,6 @@
+pip install django
+pip install mysqlclient
+pip install django-ipware
+pip install qrcode
+pip install image
+python manage.py runserver 192.168.0.50:80

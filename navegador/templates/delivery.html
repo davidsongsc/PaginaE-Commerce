@@ -1,0 +1,154 @@
+
+<body>
+
+
+    <div class="painel-pedido">
+        <table>
+            <thead>
+                <tr>
+                    <th class="titulo1" colspan="8">{{titulo}}</th>
+
+                </tr>
+                <tr>
+                    <th class="titulo2" colspan="8">PEDIDO: {{ idpedido }}</th>
+                </tr>
+                <tr>
+
+                    <th colspan="8"></th>
+                </tr>
+                <tr>
+                    <th class="titulo3" colspan="8">CONFERENCIA DIGITAL</th>
+
+                </tr>
+                <tr>
+
+                    <th class="dthr" colspan="3">{{datahora}}</th>
+
+                    <th class="dthr" colspan="3">Consumidor: {{usuario}}</th>
+                    <th class="dthr" colspan="5">Vendedor: {{vendedor}}</th>
+                </tr>
+
+            </thead>
+            <tfoot>
+
+                <tr>
+                    <td class="vpd1" colspan="2">PEDIDO</td>
+                    <td class="vpd2" colspan="6">R$ {{vconsumo}}</td>
+                </tr>
+
+                <tr>
+                    <td class="vpd1" colspan="2">ENTREGA</td>
+                    <td class="vpd2e" colspan="6">R$ {{vtaxa}}</td>
+                </tr>
+
+                <tr>
+                    <td class="vpd1" colspan="2">DESCONTO</td>
+                    <td class="vpd2d" colspan="6">R$ {{vdesconto}}</td>
+                </tr>
+
+                <tr>
+                    <td class="vpd1" colspan="2"> TOTAL</td>
+                    <td class="vpd2g" colspan="6">R$ {{vtotal}}</td>
+
+                </tr>
+                <tr>
+                    <td class="vpd1" colspan="2">  </td>
+                    <td class="vpd2g" colspan="6"></td>
+
+                </tr>
+                <tr>
+                    <td class="vpd1" colspan="2"> PIX</td>
+                    <td class="vpd2g" colspan="6">
+                        <img src="{{qrcode_pix}}" alt="{{qrtitulo}}" width="315" height="315"></td>
+
+                </tr>
+
+                <tr>
+                    <th colspan="8"></th>
+                </tr>
+                <tr>
+                    <th colspan="8"></th>
+                </tr>
+                <tr>
+                    <th colspan="8"></th>
+                </tr>
+
+                <tbody>
+
+                    <tr>
+                        <td class="cabec" colspan="5">PRODUTO</td>
+                        <td class="cabec" colspan="1">QTD</td>
+                        <td class="cabec" colspan="1">UND</td>
+                        <td class="cabec" colspan="1">TOTAL</td>
+                    </tr>
+                    <tr>
+                        <th colspan="8"></th>
+                    </tr>
+                    <tr>
+                        <th colspan="8"></th>
+                    </tr>
+                    <tr>
+                        <th colspan="8"></th>
+                    </tr>
+                    {% for i in comanda %}
+                    <tr>
+
+                        <td class="titulo4" colspan="5">
+                            <!--- <a href="#" class="linkcancel">{{i.0}}</a> --->
+                            <form action="rdd" method="POST">
+                                {% csrf_token %}
+                                <input type="produto" name="produto" value={{i.4}} style="opacity: 0;margin-left: -80px;padding-right: 25px;">
+                                <button type="submit" class="butom">{{i.0}}</button>
+                            </form>
+                        </td>
+                        <td class="valores1" colspan="1">{{i.1}}
+
+
+                            <td class="valores1" colspan="1">{{i.2}}</td>
+                            <td class="valores2" colspan="1">{{i.3}}</td>
+
+
+                    </tr>
+
+
+                    {% endfor %}
+                    <tr>
+                        <th colspan="8"></th>
+                    </tr>
+                    <tr>
+                        <th colspan="8"></th>
+                    </tr>
+                    <tr>
+                        <th colspan="8"></th>
+                    </tr>
+                    <tr>
+                        <th colspan="8"></th>
+                    </tr>
+                    <tr>
+                        <th colspan="8"></th>
+                    </tr>
+                </tbody>
+        </table>
+
+
+    </div>
+
+
+    <div class="bloco">
+        <nav class="nomelinks">
+            <a href="inicio">inicio</a>
+            <a href="cardapio">cardapio</a> {% for lk in links%}
+            <a href="{{lk.1}}">{{lk.0}}</a> {% endfor %}
+            <a href="">Verificar Pedido</a>
+            <a href="sair">sair</a>
+
+        </nav>
+    </div>
+
+    <div class="dividendo">
+        ...
+    </div>
+
+</body>
+
+</html>

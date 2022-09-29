@@ -1,0 +1,727 @@
+
+    @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Rampart+One&family=Rubik+Beastly&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+.sv-titulo{
+    background-color: black;
+    color: white;
+    margin: -9px;
+}
+.menu{
+    margin-top: -20px;
+    position: static;
+}
+figure {
+    position: relative;
+    text-align: right;
+    margin-top: -192px auto;
+}
+.topnav{
+    margin: 8px -0px -0px -0px auto;
+    background-color: white;
+    font-size: xx-large;
+}
+body {
+    background-color: lightsteelblue;
+    background-image: linear-gradient(lightsteelblue,darkslategrey);
+    
+}
+
+.principal-barra-rolagem{
+    text-align: center;
+    margin: -7px; 
+    border-radius: 20px;
+}
+.principal-barra-container{
+    height: 130px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: black;
+}
+figure img{
+    background-image: linear-gradient(#FFC06D ,#ECB39A);
+    border-radius: 90px;
+    box-shadow: 3px 25px 14px rgba(255, 255, 255, 0.533);  
+}
+figure .logo{
+    max-width: auto;
+}
+figure a img{
+    margin-top: 50px;
+    max-width: 150px;
+}
+
+
+.CNPJ{
+    background-color: #f7f7f7;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+.ENDERECO{
+    background-color: #dbdbdb;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+.DESCRICAO{
+    background-color: #dbdbdb;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    
+}
+.DESCRICAO2{
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #dbdbdb;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    
+}
+.titulo{
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #dbdbdb;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+h6 {
+    text-align: left;
+    margin: 0 0 -220px 215px;
+    font-size: 70px;
+    font-family: 'Nabla', cursive;
+    white-space: nowrap;
+    overflow: hidden;
+    text-shadow: 4px 4px 4px rgb(174, 7, 107);
+    
+  }
+ 
+
+.barra-opt{
+    margin: 2px 0px 0px 1px;
+   
+}
+
+.barra-lnk{
+    background-color: black;
+    border-style: ridge dashed dotted;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1px;
+    font-size: 24px;
+    padding: 11px;
+    text-transform: uppercase;
+    border-radius: 27px;
+    text-decoration: revert;
+    
+
+}
+.barra-lnk:hover{
+    text-decoration: overline;
+}
+
+body div div form {
+    font-size: 20px;
+}
+
+
+
+body div div form button {
+    
+    text-transform: uppercase;
+    
+}
+
+body div div form a {
+    background-color: rgb(243, 243, 243);
+    border-radius: 3px;
+    border-color: black;
+    border-style: outset;
+    border-width: 1px;
+    color: black;
+    font-size: 13px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 2px;
+    margin-right: 2px;
+    margin-bottom: 2px;
+    padding: 15px 10px;
+}
+
+div a {
+    align-items: top;
+    text-align: top;
+    font-size: 13px;
+}
+
+a div .alergias {
+    max-width: 100px;
+    margin-top: 15px;
+    margin-left: 2px;
+    border-radius: 55px;
+    
+
+}
+
+div .destaque {
+    max-width: 40px;
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-left: 0px;
+    border-radius: 50px;
+    display: inline-block;
+
+
+
+}
+.layout {
+    margin-top: 30px;
+}
+a div p {
+    padding: 10px;
+    height: 130px;
+}
+
+div p a img {
+    border-radius: 50%;
+
+}
+
+/* Barra superior do site*/
+.conteudo-cardapio {
+    text-align: center;
+    margin-bottom: 420px;
+
+}
+.conteudo-lateral{
+    margin-top: 20px;
+    margin-left: 1%;
+    
+}
+.conteudo-primario{
+    margin-top: -5px;
+    margin-left: 1%;
+    text-align: center;
+    
+}
+.conteudo-primario-a{
+    margin-top: -21px;
+    margin-left: 1%;
+    text-align: center;
+}
+.conteudo-normal{
+    margin-top: 19px;
+    text-align: center;
+}
+.conteudo-login{
+    margin: -61px;
+    text-align: center;
+}
+.conteudo-normal-gm{
+    margin-top: 4px;
+    text-align: center;
+}
+.sticky {
+    position: fixed;
+    width: 99.19%;
+    animation: stic 1s forwards;
+    
+
+    
+}
+.barrinha {
+    position: fixed;
+    animation: stic 1s forwards;
+}
+  @keyframes stic {
+ 
+    0% {opacity: 100%;}
+    1% {opacity: 20%;}
+    2% {margin-top: -400px;}
+
+    100% {opacity: 100%; margin-top: -120px;}
+  }
+
+.sticky+.conteudo-normal {
+    
+    text-align: center;
+    
+    
+}
+
+
+.link-grupo-produto {
+    padding: 3px;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 2px rgb(255, 147, 7);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+
+.link-grupo-produtop {
+    margin-left: -10px;
+    padding: 8px;
+    color: rgb(255, 183, 124);
+    text-shadow: 2px 2px 2px rgb(164, 46, 255);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Rubik Moonrocks', cursive;
+
+}
+table{
+    position: static;
+}
+.bloco {
+    display: inline-table;
+    text-align: left;
+    margin-left: -5px;
+    margin-bottom: 30px;
+}
+
+
+
+.descricao-grupo-produto {
+    background-color: black;
+    border-radius: 15px;
+    color: white;
+    font-family: Arial;
+    font-size: 22px;
+    letter-spacing: 1.5px;
+    text-transform:capitalize;
+    text-indent: 6px;
+    text-shadow: 1px 1px 1px rgb(1, 0, 2);
+    padding: 10pxpx;
+    width: 375px;
+    border-style: ridge;
+    
+}
+
+.descricao-grupo-produto .iconemenu {
+    width: 46px;
+    opacity: 0.7;
+}
+
+.titulo_header {
+    color: rgb(228, 228, 228);
+    text-shadow: 2px 2px 2px rgb(30, 2, 37);
+    text-indent: 7px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    letter-spacing: 3.5px;
+    margin-top: -90px;
+    text-indent: 3px;
+
+
+}
+
+div form input[type=usuario] {
+    padding: 10px 10px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+div form input[type=password] {
+    padding: 10px 10px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+html body div .usuario-dados {
+    height: 128px;
+}
+.usuario-dados {
+    letter-spacing: 3.1px;
+    text-transform: capitalize;
+    text-shadow: 1px 1.5px 1.5px black;
+    text-align: center;
+    margin-top: -7px;
+    margin-left: -4px;
+    font-size: 40px;
+    background-color: white;
+    height: 60px;
+    border-radius: 10px;
+    border-style: solid;
+    
+    
+}
+.formula-d{
+    min-width: 200px;
+}
+.produto-exibicao {
+    text-align: center;
+    background-image: linear-gradient(rgb(156, 33, 33), rgb(86, 23, 110));
+    border-radius: 50px;
+    max-width: unset;
+    min-width: 650px;
+   
+}
+.lado-imagem img {
+    width: 40%;
+
+}
+
+.lado-texto h1 {
+    background-color: black;
+    color: aliceblue;
+    padding-bottom: 44px;
+    letter-spacing: 23px;
+    font-family: 'Times New Roman', serif;
+    font-size: 28px;
+    text-shadow: 4px 4x 3px rgb(248, 175, 17);
+    text-transform: uppercase;
+    width: auto;
+
+}
+
+.p3 {
+    
+    font-size: larger;
+    font-style: italic;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    background-color: rgba(205, 255, 205, 0.116);
+    
+}
+
+.p3a {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 19.5px;
+    font-style: italic;
+    text-transform: capitalize;
+    text-indent: 27px;
+    
+    background-color: rgb(40, 130, 168);
+    border-radius: 10px 10px 10px 0px;
+    box-shadow: 2px 2px 2px black;
+}   
+
+.p2 {
+    color: aliceblue;
+    margin-top: -62px;
+    margin-bottom: 10px;
+    
+    letter-spacing: 5px;
+    background-color: rgb(226, 116, 43);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    
+
+
+}
+
+.p1 {
+    color: aliceblue;
+    margin-top: -20px;
+    letter-spacing: 5px;
+    background-color: rgba(0, 240, 228, 0.418);
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 45px;
+    padding-bottom: 160px;
+    max-width: 100%;
+
+}
+
+p a img {
+    max-width: 90px;
+}
+
+.text {
+    padding: 5px;
+    text-align: center;
+    font-size: 30px;
+    max-width: 39px;
+    height: 39px;
+}
+
+.blocao-produto {
+    box-shadow: 1px 6px 4px black;
+    display: inline-block;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    text-indent: 15px;
+    background-color: crimson;
+    width: 363px;
+    padding-bottom: 20px;
+}
+
+.blocao-produto:hover {
+    background-color: rgb(150, 3, 137);
+    box-shadow: 1px 6px 4px white;
+}
+
+label a {
+    color: beige;
+}
+
+h3 {
+    align-items: center;
+    text-align: center;
+    background-color: rgb(226, 116, 43);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 18px;
+    border-bottom-left-radius: 29px;
+    color: rgb(255, 255, 255);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 54px;
+    letter-spacing: 2px;
+    margin: 19px 3px -10px 2px;
+    padding: 65px -2px 0px 6px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px rgb(0, 0, 2);
+}
+.blocao-produto h2 {
+    /* letter-spacing: 6px; */
+    /* text-transform: capitalize; */
+    font-family: 'Nabla', cursive;
+    font-size: 38px;
+    border-top-right-radius: 4px;
+    /* border-top-left-radius: 330px; */
+    /* border-bottom-right-radius: 250px; */
+    /* border-bottom-left-radius: 272px; */
+    box-shadow: 6px 14px 20px white;
+    /* background-color: black; */
+    /* color: rgba(255, 255, 255, 0.907); */
+    /* margin-bottom: -2px; */
+    margin-left: 2px;
+    margin-top: -32px;
+    text-shadow: -2px -4px 0px rgb(0 0 0);
+    /* text-indent: 37px; */
+    /* max-width: 98.8%; */
+}
+.nome-produto {
+    align-items: center;
+    text-align: center;
+    background-color: burlywood;
+    background-image: linear-gradient(180deg, white, burlywood);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    font-size: 42px;
+    letter-spacing: 12px;
+    margin-left: 0px;
+    margin-bottom: -195px;
+    padding-top: 90px;
+    padding-bottom: 184px;
+    animation-delay: 0.2s;
+    animation: alternate;
+}
+.nome-grupo {
+    align-items: center;
+    text-align: center;
+    color: beige;
+    background-color:slategrey;
+    text-shadow: 6px 2px 0px black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    font-size: 40px;
+    letter-spacing: 0.5px;
+    margin-left: 0px;
+    margin-bottom: -195px;
+    padding-top: -52px;
+    padding-bottom: 184px;
+    animation-delay: 0.2s;
+    animation: alternate;
+    
+}
+h6 {
+	-webkit-animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+	        animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2022-9-16 12:27:49
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation puff-in-center
+ * ----------------------------------------
+ */
+ @-webkit-keyframes puff-in-center {
+    0% {
+      -webkit-transform: scale(2);
+              transform: scale(2);
+      -webkit-filter: blur(4px);
+              filter: blur(4px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes puff-in-center {
+    0% {
+      -webkit-transform: scale(2);
+              transform: scale(2);
+      -webkit-filter: blur(4px);
+              filter: blur(4px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  
+.barra-lnk {
+	-webkit-animation: roll-in-blurred-left 0.65s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+	        animation: roll-in-blurred-left 0.65s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2022-9-16 12:19:14
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation roll-in-blurred-left
+ * ----------------------------------------
+ */
+ @-webkit-keyframes roll-in-blurred-left {
+    0% {
+      -webkit-transform: translateX(-1000px) rotate(-720deg);
+              transform: translateX(-1000px) rotate(-720deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0) rotate(0deg);
+              transform: translateX(0) rotate(0deg);
+      -webkit-filter: blur(0);
+              filter: blur(0);
+      opacity: 1;
+    }
+  }
+  @keyframes roll-in-blurred-left {
+    0% {
+      -webkit-transform: translateX(-1000px) rotate(-720deg);
+              transform: translateX(-1000px) rotate(-720deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0) rotate(0deg);
+              transform: translateX(0) rotate(0deg);
+      -webkit-filter: blur(0);
+              filter: blur(0);
+      opacity: 1;
+    }
+  }
+  
+.descricao-grupo-produto {
+	-webkit-animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2022-9-16 12:11:20
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation shadow-drop-center
+ * ----------------------------------------
+ */
+ @-webkit-keyframes shadow-drop-center {
+    0% {
+      -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+              box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+      -webkit-box-shadow: 0 0 90px 0px rgba(0, 0, 0, 0.35);
+              box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.35);
+    }
+  }
+  @keyframes shadow-drop-center {
+    0% {
+      -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+              box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+      -webkit-box-shadow: 0 0 65px 0px rgba(0, 0, 0, 0.35);
+              box-shadow: 0 0 60px 0px rgba(0, 0, 0, 0.35);
+    }
+  }
+  
+
+.bloco-m {
+    align-items: center;
+    text-align: center;
+    
+    padding-bottom: 40px;
+    
+}
+.dispo {
+    display: inline;
+}
+
+.img-produto {
+    /* opacity: 37%; */
+    max-width: 100%;
+    box-shadow: 0px 33px 10px black;
+    /* border-radius: 20%; */
+}
+
+form {
+    text-align: center;
+    
+}
+
+input[type=button] {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 36px;
+    align-items: center;
+    text-align: center;
+  
+}
+
+input[id=quantidade] {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 36px;
+    align-items: center;
+    text-align: center;
+
+
+}
+
+.st-sbmt {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 36px;
+    align-items: center;
+    text-align: center;
+
+
+}
+
+div div div h1 {
+    font-size: 60px;
+}
+.lista-produtos{
+    max-width: 5%;
+}
+
+    
+    

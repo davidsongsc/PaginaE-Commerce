@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale={{initial_scale}}">
+    <title>{{titulo}} - {{titulo_web}}</title>
+    <link rel="stylesheet" href="../static/css/{{ncss}}" media="screen">
+    <link rel="shortcut icon" href="../static/img/icone.ico" />
+</head>
+
+<body>
+    <div class="layout">
+        {% include 'barra/bar_sp.html' %}
+        <div class="conteudo-lateral">
+            <form action="usuario" method="POST">
+                <p class="descr-evento">{% csrf_token %}<input type="usuario" name="usuario" placeholder="Usuario"></p>
+                <p class="descr-evento"><input type="password" name="senha" placeholder="Senha"></p>
+                <p class="descr-evento">Senha invalida ou não correspondem, minimo de 6 digitos!</p>
+                <p class="descr-evento"><input type="password" name="csenha" placeholder="Confirmar Senha"></p>
+                <p class="descr-evento"></p><button class="btn" type="submit">Avançar</button>
+            </form>
+        </div>
+
+    </div>
+
+    </div>
+
+    <script>
+        window.onscroll = function() {
+            myFunction()
+        };
+
+        var header = document.getElementById("usuario-cct");
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+                element.classList.remove("loginoculto");
+
+            } else {
+                header.classList.remove("sticky");
+                element.classList.add("loginvisivel");
+
+            }
+        }
+    </script>
+
+    <script>
+        function login_gg() {
+            var element = document.getElementById("login_mn");
+            element.classList.remove("loginoculto");
+            element.classList.add("loginvisivel");
+        }
+    </script>
+</body>

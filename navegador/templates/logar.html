@@ -1,0 +1,28 @@
+
+    {% include 'barra/head/head.html' %}
+    {% include 'barra/bar_sp.html' %}
+
+<body>
+    <div class="login">
+        <div class="espaco"></div>
+        <form action="logar" method="POST">
+
+            <p class="descr-evento" style="font-size: 40px;">Autenticação</p>
+            <p class="descr-evento">{% csrf_token %}<input type="usuario" name="usuario" placeholder="Usuario" style="{{error.0 }}"></p>
+            <p class="descr-evento"><input type="password" name="senha" placeholder="Senha" style="{{error.0 }}"></p>
+            <p class="descr-evento"></p><button class="btn" type="submit" style="width: 80px;">Entrar</button>
+            <p class="descr-evento">
+                <div>
+                    <div>
+                        <input type="checkbox" id="scales" name="scales" checked>
+                        <label for="scales">Lembrar-se</label>
+                    </div>
+                </div>
+            </p>
+
+        </form>
+    </div>
+
+</body>
+
+</html>

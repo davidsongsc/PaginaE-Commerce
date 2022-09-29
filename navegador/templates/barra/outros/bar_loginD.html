@@ -1,0 +1,30 @@
+<div id="usuario-cct" class="usuario-dados" >
+
+    <div class="nav-opt" >
+        <nav class="barra-opt">
+            <a href="../pedido"  class="barra-lnk">Pedido R$ {{valor_parcial.0}}</a>
+            <a href="perfil" class="barra-lnk">Perfil</a>
+            <a href="../" class="barra-lnk">Cardapio</a>
+            <a href="../sair" class="barra-lnk">sair</a>
+            <!--                  <a href="#" class="link-inicial">Cupons</a> -->
+        </nav>
+    </div>
+    <form action="../add" method="POST" class="formula-d" style="padding: 17px;">
+        {% csrf_token %}
+        <input type="button" id="plus" value=' - ' onclick="process(-1)"  />
+        <input id="quantidade" name="quantidade" class="text" size="1" type="text" value="1" maxlength="5"  />
+        <input type="button" id="minus" value=' + ' onclick="process(1)" >
+        <button type="submit" class="st-sbmt" name="produtoid" value="{{j.0}}" >Adicionar</button>
+    </form>
+</div>
+
+<script>
+    window.onscroll = function () {
+        myFunction()
+    };
+
+    var header = document.getElementById("usuario-cct#");
+    var sticky = header.offsetTop;
+
+
+</script>

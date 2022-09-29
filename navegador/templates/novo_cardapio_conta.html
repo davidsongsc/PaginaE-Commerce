@@ -1,0 +1,169 @@
+{% include 'barra/head/head.html' %}
+{% include 'barra/head/style.html' %}
+<body>
+    <div class="layout">
+        {% include 'barra/bar_sp_loginc.html' %}
+        <div class="conteudo-normal">
+            <div class="painel-pedido">
+                <table class="tabela">
+                    <thead>
+                     
+                        <tr>
+                            <th class="CNPJ" colspan="16">CNPJ: {{cnpj}}</th>
+                            </tr>
+                
+                        <tr>
+                            <th class="ENDERECO" colspan="16">{{e_endereco}}</th>
+                            </tr>
+                            <tr>
+                                <th class="ENDERECO" colspan="16">{{e_complemento}}</th>
+                                </tr>
+                        <tr>
+=
+                            <tr>
+                                <th class="ENDERECO" colspan="16">{{e_telefone1}}</th>
+                            </tr>
+                            <tr>
+                                <th class="DESCRICAO" colspan="16">Documento Auxiliar da Nota Fiscal de consumidor Eletrônica</th>
+                            </tr>
+                 
+                        </tr>
+
+            
+                    </thead>
+                    <tr>
+                        <th colspan="8"></th>
+                    </tr>
+                    <tr>
+                        <th colspan="8"></th>
+                    </tr>
+                    <tr>
+                        <th colspan="8"></th>
+                    </tr>
+                    <tfoot>
+                        <tr>
+                            <td class="ENDERECO" colspan="3">PEDIDO</td>
+                            <td class="CNPJ" colspan="13">R$ {{vconsumo}}</td>
+                        </tr>
+
+                        <tr>
+                            <td class="ENDERECO" colspan="3">ENTREGA</td>
+                            <td class="CNPJ" colspan="13">R$ {{vtaxa}}</td>
+                        </tr>
+
+                        <tr>
+                            <td class="ENDERECO" colspan="3">DESCONTO</td>
+                            <td class="CNPJ" colspan="13">R$ {{vdesconto}}</td>
+                        </tr>
+
+                        <tr>
+                            <td class="ENDERECO" colspan="3"> TOTAL</td>
+                            <td class="CNPJ" colspan="13">R$ {{vtotal}}</td>
+
+                        </tr>
+
+                        <tr>
+                            <th colspan="8"></th>
+                        </tr>
+                        <tr>
+                            <th colspan="8"></th>
+                        </tr>
+                        <tr>
+                            <th colspan="8"></th>
+                        </tr>
+
+                        <tbody>
+
+                            <tr>
+                                
+                                <td class="ENDERECO" colspan="8">PRODUTO</td>
+                                
+                                <td class="ENDERECO" colspan="4">QTD</td>
+                                <td class="ENDERECO" colspan="2">UND</td>
+                                <td class="ENDERECO" colspan="2">TOTAL</td>
+                                
+                            </tr>
+                  
+                            {% for i in comanda %}
+                            <tr>
+                                
+                                
+                                <td class="CNPJ" colspan="1">{{i.0}}</td>
+                                <td class="DESCRICAO2" colspan="8">
+                                    <!--- <a href="#" class="linkcancel">{{i.0}}</a> --->
+                                    <form action="rdd" method="POST">
+                                        {% csrf_token %}
+                                        <input type="produto" name="produto" value={{i.4}}
+                                            style="opacity: 0; width: 0; margin-left: -1px;" >
+                                            
+                                        <button type="submit" class="butom">remover</button>
+                                    </form>
+                                </td>
+                                <td class="DESCRICAO2" colspan="2">{{i.1}}</td>
+                                <td class="DESCRICAO2" colspan="2">{{i.2}}</td>
+                                <td class="DESCRICAO2" colspan="2">{{i.3}}</td>
+                                
+
+                            </tr>
+
+
+                            {% endfor %}
+                      
+                        </tr>
+                        <tr>
+                            <th colspan="8"></th>
+                        </tr>
+                        <tr>
+                            <th colspan="8"></th>
+                        </tr>
+                        <tr>
+                            <th colspan="8"></th>
+                        </tr>
+                        <tr>
+                            <th class="titulo" colspan="16">{{nome_fiscal}}</th>
+                            
+                        </tr>
+                        <tr>
+                            <th colspan="8"></th>
+                        </tr>
+                        <tr>
+                            <th colspan="8"></th>
+                        </tr>
+                        <tr>
+                            <th colspan="8"></th>
+                        </tr>
+                        <tr><th class="DESCRICAO2" colspan="16">PEDIDO: {{ idpedido }}</th>
+                        </tr>
+                        <tr>
+                        <th class="DESCRICAO2" colspan="16">{{datahora}}</th>
+                        
+                    </tr>
+                        
+                        
+                    </tr>
+                            <tr>
+                                <th class="DESCRICAO2" colspan="16">Vendedor: {{vendedor}}</th>
+                            </tr>
+                            <tr>
+                                <th class="DESCRICAO2" colspan="8">Consumidor: {{usuario}}</th>
+                                
+                                <th class="DESCRICAO2" colspan="8">PROTOCOLO: 356KY</th>
+                            </tr>
+                            <tr>
+                                <th class="DESCRICAO" colspan="16">cpf: 123.345.567.76</th>
+                            </tr>
+                        </tbody>
+                </table>
+                <a class="finalizar" href="../conferencia">Finalizar</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    </div>
+    {% include 'barra/head/script.html' %}
+
+
+</body>

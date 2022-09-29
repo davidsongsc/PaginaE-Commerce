@@ -1,0 +1,38 @@
+{% include 'barra/head/head.html' %}
+{% include 'barra/bar_sp_pura_adm.html' %}
+
+<h1>Relatorio Vendas</h1>
+<style>
+    table, th, td {
+      border:1px solid black;
+    }
+    </style>
+<table style="width:100%">
+    <tr>
+      <th>VENDA: </th>
+      <th>{{total}}</th>
+
+    </tr>
+
+    
+
+  </table>
+  <table style="width:100%">
+    <tr>
+      <th>ID PG</th>
+      <th>PEDIDO</th>
+      <th>VALOR PAGO</th>
+      <th>BANDEIRA</th>
+
+    </tr>
+    {%for m in pagamento_listagem%}
+    <tr>
+      <td>{{m.0}}</td>
+      <td>{{m.1}}</td>
+      <td>{{m.2}}</td>
+      <td>{{m.3}}</td>
+
+
+    </tr>
+    {%endfor%}
+  </table>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <meta name="viewport" content="width=device-width, initial-scale={{initial_scale}}">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;1,300&family=Orelega+One&family=Original+Surfer&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&family=Zen+Dots&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/{{css}}" media="screen">
+    <link rel="stylesheet" href="static/css/esqueleto.css" media="screen">
+    <link rel="shortcut icon" href="static/img/icone.ico" />
+
+    <title>{{titulo}}</title>
+</head>
+{% include 'barra/bar_sp.html' %}
+<body>
+    <div class="painele">
+        <nav class="navegador">
+            <ul>
+                <li>
+                    <a href="#" class="linkmenu">Explorador</a>
+                </li>
+                <li>
+                    <a href="#" class="linkmenu">Meu Pedido</a>
+                </li>
+                <li>
+                    <a href="#" class="linkmenu">Tabela de Alergênicos</a>
+                </li>
+                <li>
+                    <a href="#" class="linkmenu">Veganos</a>
+                </li>
+                <li>
+                    <a href="#" class="linkmenu">Vegetariano</a>
+                </li>
+                <li>
+                    <a href="#" class="linkmenu">Fitness</a>
+                </li>
+                <li>
+                    <a href="#" class="linkmenu">Pesquisa</a>
+                </li>
+
+            </ul>
+        </nav>
+
+    </div>
+    <div class="menu">
+        <div class="topicos">
+            <h1 class="titulo">Painel do usuario</h1>
+            <div class="painel-usuario">
+            </div>
+
+        </div>
+        <div class="blocolinks">
+            <nav class="nomelinks">
+                <a href="sair">sair</a>
+                <a href="delivery">pedido</a>
+                <a href="cardapio">cardapio</a> {% for lk in links%}
+                <a href="{{lk.1}}">{{lk.0}}</a> {% endfor %}
+            </nav>
+        </div>
+
+        <div class="blocolinks2">
+            <nav class="nomelinks2">
+                <a href="Pesquisa">pesquisa</a>
+                <a href="quemsomos">quemsomos</a>
+                <a href="duvidas">ajuda</a> {% for lk in links%}
+                <a href="{{lk.1}}">{{lk.0}}</a> {% endfor %}
+            </nav>
+        </div>
+    </div>
+
+
+    <div class="dividendo">
+        ...
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+{% include 'barra/head/head.html' %}
+{% include 'barra/head/style.html' %}
+<body>
+    {% include 'barra/bar_sp_login.html' %}
+        <div class="conteudo-produto">
+            {% for j in produto %}
+            <form action="../add" method="POST" class="formula-d" style="width: 70px ; text-align: center; font-size: 1em;">
+                {% csrf_token %}
+                <input type="button" id="plus" value=' - ' onclick="process(-1)"  />
+                <input id="quantidade" name="quantidade" class="text" size="1" type="text" value="1" maxlength="5"  />
+                <input type="button" id="minus" value=' + ' onclick="process(1)" >
+                <button type="submit" class="st-sbmt" name="produtoid" value="{{j.0}}" >Adicionar</button>
+            </form>
+            <div class="produto-exibicao">
+                <div class="lado-texto">
+                    <h1>{{j.2}}</h1>
+                    <h3>R$ {{j.3}}</h3>
+                    <div class="lado-imagem">
+                        <img src="../static/img/cardapio/{{j.1}}.png" alt="">
+                    </div>
+                    <p class="p3">
+                        {% for k in j.5 %}
+                        <a href=" /tabela_saude ">
+                            <img src="../static/img/{{k}}.png ">
+                        </a> {% endfor %}</p>
+                    <p class="p4">
+                        {%for f in j.6 %}
+                        <a href="/tabela_eventos ">
+                            <img src="../static/img/{{f}}.png ">
+                        </a>{% endfor %}</p>
+                    <p class="p3a">{{j.4}}</p>
+
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+
+
+</body>

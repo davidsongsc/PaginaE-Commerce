@@ -1,0 +1,23 @@
+{% include 'barra/head/head.html' %}
+{% include 'barra/head/style.html' %}
+
+<body>
+    <div class="layout">
+        <div id="bfixado">{% include 'barra/bar_sp_login.html' %}
+        </div>
+        <div class="conteudo-normal-gm">
+            <nav class="conteudo-cardapio">{% for j in itens %}
+                <label class="dispo" for="">
+                    <a href="../pesquisa/{{ j.1 }}" class="link-grupo-produto">
+                        <div class="blocao-produto">
+                            <h2 class="nome-produto">{{ j.2 }}</h2>
+                            <img class="img-produto" src="../static/img/cardapio/{{j.1}}.png" alt="">
+                            <p class="p3a">{{j.4}}</p>
+                            <h3>R$ {{ j.3 }}</h3>
+                        </div>
+                    </a>
+                </label> {% endfor %}
+            </nav>
+        </div>
+    </div>{% include 'barra/head/script.html' %}
+</body>

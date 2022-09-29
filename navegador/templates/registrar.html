@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <meta name="viewport" content="width=device-width, initial-scale={{initial_scale}}">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;1,300&family=Orelega+One&family=Original+Surfer&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&family=Zen+Dots&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/{{css}}" media="screen">
+    <link rel="stylesheet" href="static/css/esqueleto.css" media="screen">
+    <link rel="shortcut icon" href="static/img/icone.ico" />
+
+    <title>{{titulo}}</title>
+</head>
+{% include 'barra/bar_sp.html' %}
+
+<body>
+    <div class="conteudo-normal">
+        <form action="registrar" method="POST">
+
+            <p class="descr-evento">{{evento.0.1}}</p>
+            <p class="descr-evento">{% csrf_token %}<input type="usuario" name="usuario"></p>
+            <p class="descr-evento">{{evento.0.3}}</p>
+            <p class="descr-evento"><input type="password" name="senha"></p>
+            <p class="descr-evento">{{evento.0.5}}</p>
+            <p class="descr-evento">{{evento.0.6}}</p>
+            <p class="descr-evento"><input type="cpf" name="cpf"></p>
+            <p class="descr-evento"></p><button class="btn" type="submit">{{evento.0.6}}</button>
+            <p class="descr-evento">{{evento.0.7}}</p>
+        </form>
+
+    </div>
+    
+    
+</body>
+
+</html>

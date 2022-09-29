@@ -1,0 +1,126 @@
+{% include 'barra/head/head.html' %}
+{% include 'barra/bar_sp_pura_adm.html' %}
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+  
+
+
+<body>
+  
+
+  <h1>painel de controle - Funcionarios</h1>
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+    }
+    .pagamentoGF{
+      height: 700px;
+    }
+  </style>
+  <table>
+    <tr>
+      <th>
+        Pagamento Ref
+      </th>
+      <th>
+        A Pagar
+      </th>
+     
+      <th>
+        Gorjeta
+      </th>
+      <th>
+        Total Horas
+      </th>
+
+      <th>
+        Colaboradores
+      </th>
+      <th>
+        Colaboradores Ativos
+      </th>
+    </tr>
+    <tr>
+      <td>
+        JANEIRO 2022
+      </td>
+      <td>
+        R$ {{totalm}}
+      </td>
+
+      <td>
+        R$ {{gorjeta}}
+      </td>
+      <td>
+        {{total_horas}}
+      </td>
+
+      <td>
+        {{tfun}}
+      </td>
+      <td>
+        {{tfuna}}
+      </td>
+    </tr>
+  </table>
+  <div class="pagamentoGF" id="graficoPagamento">
+
+    <script>
+
+
+      google.charts.load('current', { 'packages': ['corechart'] });
+  
+      function desenhoGraficopagamento() {
+  
+        var tabela = new google.visualization.DataTable();
+        tabela.addColumn('string', 'categorias');
+        tabela.addColumn('number', 'valores');
+        '{%for x in pglista_%}'
+        tabela.addRow(['{{x.0}}', parseInt('{{x.1}}')]);
+        '{%endfor%}'
+  
+        var grafico = new google.visualization.PieChart(document.getElementById('graficoPagamento'));
+        grafico.draw(tabela);
+      }
+  
+      google.charts.setOnLoadCallback(desenhoGraficopagamento);
+  
+  
+    </script>
+  </div>
+  <table style="width:100%">
+    <tr>
+      <th>Login</th>
+      <th>Funcionario</th>
+      <th>Nivel</th>
+      <th>V Hora</th>
+      <th>V Bonus</th>
+      <th>V Total</th>
+      <th>Total horas</th>
+      <th>H Pagar</th>
+      <th>G Pagar</th>
+      <th>Pagamento</th>
+      <th>--</th>
+    </tr>
+    {%for m in funcionario%}
+    <tr>
+      <td>{{m.0}}</td>
+      <td>{{m.1}}</td>
+      <td>{{m.2}}</td>
+      <td>R$ {{m.3}}</td>
+      <td>R$ {{m.4}}</td>
+      <td>R$ {{m.5}}</td>
+      <td>{{m.6}}</td>
+      <td>R$ {{m.8}}</td>
+      <td>R$ {{m.9}}</td>
+      <td>R$ {{m.10}}</td>
+      <td><button>Editar</button></td>
+    </tr>
+    {%endfor%}
+
+  </table>
+</body>

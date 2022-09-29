@@ -1,0 +1,14 @@
+{% include 'barra/head/head.html' %}
+
+<body onload="esgotado()">
+    <script>
+        function esgotado()
+        {
+            alert("ATENÇÃO!\n\n\nPedimos desculpa pelo inconveniente...\n\nDISPONIBILIDADE: {{disponibilidade}}\n\nAltere a quantidade para o valor desejado comprando. "
+            );
+            window.history.back();
+        }
+    </script>
+</body>
+
+</html>

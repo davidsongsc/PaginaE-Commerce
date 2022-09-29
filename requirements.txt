@@ -1,0 +1,10 @@
+django
+django-sslserver
+django-ipware
+tzdata
+wget
+qrcode
+image
+numpy
+
+

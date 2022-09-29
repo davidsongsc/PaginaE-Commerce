@@ -1,0 +1,68 @@
+{% include 'barra/head/head.html' %}
+{% include 'barra/bar_sp_pura_adm.html' %}
+<style>
+  table,
+  th,
+  td {
+    border: 1px solid black;
+  }
+
+  img {
+    width: 8%;
+  }
+</style>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale={{initial_scale}}">
+  <title>{{titulo}} - {{titulo_web}}</title>
+  <link rel="stylesheet" href="../static/css/{{ncss}}" media="screen">
+  <link rel="shortcut icon" href="../static/img/icone.ico" />
+</head>
+
+<body>
+  <div class="conteiner">
+
+    <div id="body" class="barra_superior">
+
+      <header id="principal_primeiro" class="principal-primeiro">
+
+      </header>
+      <h1 class="titulo_header">Todos os produtos</h1>
+
+      <div id="usuario-cct" class="usuario-dados">
+
+
+      </div>
+
+      <h1>painel de controle - Produtos</h1>
+
+      <table style="width:100%">
+        <tr>
+          <th>IMG</th>
+          <th>ID</th>
+          <th>Produto</th>
+          <th>Grupo</th>
+
+          <th>Descrição</th>
+          <th>Disponibilidade</th>
+          <th>Avaliações</th>
+        </tr>
+        {%for m in produto%}
+        <tr>
+          <td><img src="../static/img/cardapio/{{m.nomeoriginal}}.png" alt=""></td>
+          <td><a href="editar_peroduto/{{m.nomeoriginal}}">{{m.nomeoriginal}}</a></td>
+          <td><a href="editar_peroduto/{{m.nomeoriginal}}">{{m.nomefantasia}}</a></td>
+          <td>{{m.tipo}}</td>
+
+          <td>{{m.descr}}</td>
+          <td>{{m.disponibilidade}}</td>
+          <td>{{m.valorreal}}</td>
+
+
+        </tr>
+        {%endfor%}
+
+      </table>
+    </div>

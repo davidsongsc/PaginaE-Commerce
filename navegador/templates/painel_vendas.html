@@ -1,0 +1,41 @@
+{% include 'barra/head/head.html' %}
+{% include 'barra/bar_sp_pura_adm.html' %}
+<h1>Relatorio Vendas</h1>
+<style>
+    table, th, td {
+      border:1px solid black;
+    }
+    </style>
+<table style="width:100%">
+    <tr>
+      <th>VENDA</th>
+        <th>Data</th>
+
+    </tr>
+    <tr>
+      <td>{{total}}</td>
+      <td>{{data_hoje}}</td>
+    </tr>
+    
+
+  </table>
+  <br>
+  <table style="width:100%">
+    <tr>
+      <th>Comanda</th>
+      <th>Produto</th>
+      <th>Vendedor</th>
+      <th>Valor</th>
+
+    </tr>
+    {%for m in comanda_listagem%}
+    <tr>
+      <td>{{m.0}}</td>
+      <td>{{m.1}}</td>
+      <td>{{m.2}}</td>
+      <td>{{m.3}}</td>
+
+
+    </tr>
+    {%endfor%}
+  </table>

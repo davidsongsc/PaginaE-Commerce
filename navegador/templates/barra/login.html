@@ -1,0 +1,120 @@
+{% include 'barra/head/head.html' %}
+<style>
+  body {
+    overflow: hidden;
+  }
+</style>
+
+<body>
+
+
+  </div>
+  </div>
+
+  <body>
+
+    <div class="conteudo">
+      
+      <div class="caixa">
+        
+        <span class="d09q089q8h2" style="margin-top: 20px;">
+          <h4>Usuario</h4>
+          <div class="j087uyhdf21h8-79uhgrd">
+            <form id="login-user" action="../logar" method="POST">
+              {% csrf_token %}
+              <div class="character">
+                <div class="eyes">
+                  <div class="eye"></div>
+                  <div class="eye"></div>
+                </div>
+              </div>
+              <p>{{e}}</p>
+              <input type="usuario" name="usuario" class="usuario" placeholder="Usuario">
+              <input type="password" name="senha" class="senha" placeholder="Senha"><br>
+              <button class="btn" type="submit" class="butom">Entrar</button>
+              <br>
+            </form>
+            <div class="f8jh-4e8791hgc">
+              <a href="../cadastro" class="d9873eh9">Inscrever-se agora</a><br><br>
+              <a href="../" class="d9873eh9">Inicio Cardapio</a><br><br>
+              <a href="#h7dqhe" class="d9873eh9">Suporte</a> <br> <br>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="conteudo2">
+      <div id="08jfc1" style="padding-top: 50px;"></div>
+      <div class="caixa2">
+        <span class="d09q089q8h2" style="margin-top: 20px;">
+          <h4>Funcionario</h4>
+          <form id="login-adm" action="logaradm" method="POST">
+            {% csrf_token %}
+            <label for=""></label>
+            <img src="../static/img/bg/burg.png" alt="{{titulo}}®" title="{{titulo}}®">
+            <p>{{e}}</p>
+            <input type="usuario" name="usuario" class="usuario" placeholder="Login">
+            <input type="password" name="password" class="senha" placeholder="Senha">
+            <button class="btn" type="submit" class="butom">Entrar</button><br>
+          </form>
+          <div class="f8jh-4e8791hgc">
+            <a href="#h7dqhe" class="d9873eh9">Suporte</a><br><br>
+          </div>
+      </div>
+    </div>
+
+    <div class="conteudo3">
+      <div class="caixa3">
+        <div id="h7dqhe"></div>
+        <span>
+          <h4>Painel</h4>
+          <br><br>
+          <p class="oiuhrfd10">
+            <a href="#" class="d9873eh9">Entrar</a><br>
+            <a href="/" class="d9873eh9">Catalogo</a><br>
+            <a href="/" class="d9873eh9">Pesquisa</a><br>
+            <a href="#08jfc1" class="d9873eh9">Funcionario</a><br>
+          </p>
+          <div class="barra">
+            <h4>--------- OU --------</h4>
+          </div>
+          <p class="d9873eh9">Não possui conta?
+          </p>
+          <div class="oiuhrfd10">
+            <a href="../cadastro" class="d9873eh9">Inscrever-se agora</a>
+            <a href="#" class="d9873eh9">Fale Conosco</a>
+            <a href="#" class="d9873eh9">Sugestões</a>
+            <a href="#" class="d9873eh9">Area Curriculo</a><br><br>
+          </div>
+        </span>
+      </div>
+      <span></span>
+      <span></span>
+
+
+
+    </div>
+
+  </body>
+</body>
+<script>
+  const loginForm = document.querySelector('#login-user')
+  const characterEyes = loginForm.querySelector('.eyes')
+  const usuarioInput = loginForm.querySelector('.usuario')
+  const senhaInput = loginForm.querySelector('.senha')
+
+  function updateEyeballPosition(value) {
+    if (typeof value !== 'number') {
+      const offset = usuarioInput.value.length * (100 / usuarioInput.maxLength)
+      value = Math.max(Math.min(offset, 90), 10);
+    }
+
+    characterEyes.style.setProperty('--eye-ball-offset', `${value}%`);
+  }
+
+  usuarioInput.addEventListener('keyup', () => updateEyeballPosition())
+  usuarioInput.addEventListener('focus', () => updateEyeballPosition())
+  usuarioInput.addEventListener('blur', () => updateEyeballPosition(50))
+
+  senhaInput.addEventListener('focus', () => characterEyes.classList.add('closed'))
+  senhaInput.addEventListener('blur', () => characterEyes.classList.remove('closed'))
+</script>
