@@ -2,14 +2,9 @@
 {% include 'barra/head/style.html' %}
 {% include 'barra/bar_sp_logingm.html' %}
 
-<style>
-  .produto-exibicao {
-    text-align: center;
-    align-items: center;
-  }
-</style>
+
 <body>
-  <div class="layout" style="text-align: center;">
+  <div class="layout">
     <div class="conteudo-produto">{% for j in produto %}
       <form action="../modproduto" method="POST" class="formula-d">{% csrf_token %}
         <div class="produto-exibicao">
@@ -60,30 +55,30 @@
                     </div>
                     <input type="file" name="imagens" class="p3" multiple />
           </div>
-          <div class="lado-texto" style="text-align: center;">
+          <div class="lado-texto" >
 
             <h1>Descrição</h1>
             <h3><textarea id="descr" name="descr" rows="6" cols="33"
-                style="width: 88%; font-size: 30px; border-bottom-right-radius: 60px;border-bottom-left-radius: 60px;">{{j.4}}
+              >{{j.4}}
                     </textarea></h3>
             <h1>Disponibilidade</h1>
 
-            <h3><label class="radio" style="font-size: 40px; color:yellow; text-transform:uppercase;">
+            <h3><label class="radio" >
                 <input type="radio" name="disponivel" value="2">Limitado
-                <input type="text" name="quantidade" value="{{j.17}}" style="font-size: 15px;">
+                <input type="text" name="quantidade" value="{{j.17}}" >
 
               </label><br>
-              <label class="radio" style="font-size: 40px; color:red; text-transform:uppercase;">
+              <label class="radio" >
                 <input type="radio" name="disponivel" value="1">
                 INDISPONIVEL
               </label><br>
-              <label class="radio" style="font-size: 40px; color:green; text-transform:uppercase;">
+              <label class="radio" >
                 <input type="radio" name="disponivel" value="0" checked>
                 DISPONIVEL ILIMITADO
               </label>
             </h3>
             <h1>lista promos</h1>
-            <select name="promo" id="promo" value="{{j.19}}" style="font-size: 40px; width: 89%;">
+            <select name="promo" id="promo" value="{{j.19}}" >
               <option value="86">VAZIO</option>
               {% for i in promo %}
               <option value="{{i}}">{{i}}</option>
@@ -91,7 +86,7 @@
               <option value="{{j.19}}" selected="selected"></option>
             </select>
 
-            <p class="p1" style="margin-top: 20px;"><br><button type="submit" class="st-sbmt" name="produtoid"
+            <p class="p1" ><br><button type="submit" class="st-sbmt" name="produtoid"
                 value="{{j.0}}">Salvar</button><button class="st-sbmt">cancelar</button></p>
           </div>
       </form>

@@ -79,6 +79,49 @@ def cardapio_principal(request):
                                                 'visuald': visuald,
                                                 })
 
+def cozinha(request, modelo):
+    # Rendering the template 'novo_cardapio_principal.html'
+    titulo_web = modelo
+    print(modelo)
+    if 'nickapelido' in request.session:
+        usuario = request.session['nickapelido']
+        valor_parcial = valor_carrinho(request)
+        return render(request, 'janela.html', {'titulo': titulo,
+                                             'usuario': usuario,
+                                             'modelo': modelo,
+                                             'valor_parcial': valor_parcial,
+                                             'ncss': ncss,
+                                             'visuald': visuald,
+                                             'initial_scale': initial_scale,
+                                             'link': link,
+                                             'titulo_web': titulo_web,
+                                             })
+    elif 'gerentelog' in request.session:
+            usuario = request.session['gerentelog']
+            valor_parcial = 0.0
+            return render(request, 'janela.html', {'titulo': titulo,
+                                             'usuario': usuario,
+                                             'modelo': modelo,
+                                             'valor_parcial': valor_parcial,
+                                             'ncss': ncss,
+                                             'visuald': visualg,
+                                             'initial_scale': initial_scale,
+                                             'link': link,
+                                             'titulo_web': titulo_web,
+                                                    })    
+    else:
+        usuario = 'Fulano'
+        valor_parcial = 0.00
+        return render(request, 'janela.html', {'titulo': titulo,
+                                                'usuario': usuario,
+                                                'modelo': modelo,
+                                                'valor_parcial': valor_parcial,
+                                                'initial_scale': initial_scale,
+                                                'ncss': ncss,
+                                                'link': link,
+                                                'titulo_web': titulo_web,
+                                                'visuald': visuald,
+                                                })
 def grupo_pesquisa(request, grupo_id:str):
     if grupo_id in ab:
         titulo_web = grupo_id

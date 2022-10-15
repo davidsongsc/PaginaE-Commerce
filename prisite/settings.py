@@ -84,13 +84,20 @@ WSGI_APPLICATION = 'prisite.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
+    'default2': {
         'ENGINE': 'django.db.backends.sqlite3',
         # This is where you put the name of the db file.
         'NAME': 'base.sqlite3',
         # If one doesn't exist, it will be created at migration time.
     },
-
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'chavaburg',
+        'USER': 'maquina',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '3306'
+    }
 
 }
 

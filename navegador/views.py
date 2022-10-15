@@ -39,7 +39,8 @@ from .gestor.programs import *
 # Metodo de retorno de erros.
 from .usuario.cadastro import *
 
-
+# Modulo cozinha
+from .cozinha.gestor import *
 def formas_pagamento(request):
     datahora = dahora()
 

@@ -4,7 +4,7 @@
     {% include 'barra/bar_sp_login.html' %}
         <div class="conteudo-produto">
             {% for j in produto %}
-            <form action="../add" method="POST" class="formula-d" style="width: 70px ; text-align: center; font-size: 1em;">
+            <form action="../add" method="POST" class="formula-d">
                 {% csrf_token %}
                 <input type="button" id="plus" value=' - ' onclick="process(-1)"  />
                 <input id="quantidade" name="quantidade" class="text" size="1" type="text" value="1" maxlength="5"  />

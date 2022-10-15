@@ -1,10 +1,10 @@
 from django.urls import path, include
 from . import views
 
-
 urlpatterns = [
     path('pedidodetals/<str:produto_id>', views.pedido_detalhes, name='pedidos'),
     path('', views.cardapio_principal, name='index'),
+    path('pedidos/<str:modelo>', views.cozinha, name='index'),
     path('esgotado', views.error2, name='error2'),
     path('sair', views.sair, name='sair'),
     path('add', views.add, name='add'),
@@ -37,11 +37,5 @@ urlpatterns = [
     path('funcionario', views.painel_funcionario, name='index'),
     path('vendas', views.painel_vendas, name='index'),
     path('pagamentos', views.painel_pagamentos, name='index'),
-
-
     # URL navegação
-    
-
-
-
-]
+    ]
